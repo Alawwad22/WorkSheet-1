@@ -1,4 +1,3 @@
-; task1.asm
 %include "asm_io.inc"           ; Include I/O macros and declarations
 
 segment .data
