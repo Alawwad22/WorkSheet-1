@@ -1,25 +1,48 @@
-%include "asm_io.inc"       ; Include I/O macros and function declarations
+; task1.asm
+%include "asm_io.inc"           ; Include I/O macros and declarations
 
 segment .data
-    integer1 dd 15           ; first integer
-    integer2 dd 6            ; second integer
+    integer1 dd 15              ; first integer
+    integer2 dd 6               ; second integer
+    plus     db " + ", 0        ; string for " + "
+    equal    db " = ", 0        ; string for " = "
+    nl       db 10, 0           ; newline
 
 segment .bss
-    result   resd 1          ; reserve space for result
+    result   resd 1             ; reserve space for result
 
 segment .text
     global asm_main
 
 asm_main:
-    pusha                    ; save all registers
+    enter 0,0
+    pusha
 
-    mov eax, [integer1]      ; load first integer into eax
-    add eax, [integer2]      ; add second integer
-    mov [result], eax        ; store result in memory
+    ; compute result
+    mov     eax, [integer1]
+    add     eax, [integer2]
+    mov     [result], eax
 
-    call print_int           ; print value in eax
-    call print_nl            ; optional: print newline (if available)
+    ; print "15 + 6 = 21"
+    mov     eax, [integer1]
+    call    print_int           ; print first number
 
-    popa                     ; restore registers
-    mov eax, 0               ; return 0 to C (normal exit)
+    mov     eax, plus
+    call    print_string        ; print " + "
+
+    mov     eax, [integer2]
+    call    print_int           ; print second number
+
+    mov     eax, equal
+    call    print_string        ; print " = "
+
+    mov     eax, [result]
+    call    print_int           ; print result
+
+    mov     eax, nl
+    call    print_string        ; newline
+
+    popa
+    mov     eax, 0
+    leave
     ret
