@@ -31,8 +31,39 @@ Write an assembly program that adds two integers and prints the result.
 make run1      # builds and runs task1
 make run1_2    # builds and runs task1_2
 ```
+---
 ### Screenshots
 #### Task 1
 ![Task 1 Output](screenshots/task1_output.png)
 #### Task 1_2
 ![Task 1_2 Output](screenshots/task1_2_output.png)
+---
+
+
+
+## Task 2 – Loops and Conditionals
+
+### Goal
+The goal of this task is to learn how loops and if-statements work in assembly.  
+You will write small programs that use jumps and comparisons to repeat actions or check conditions.
+
+### Files
+- `task2_repeat_name.asm` – asks for your name and prints a welcome message many times.  
+- `task2_sum100.asm` – adds all numbers from 1 to 100.  
+- `task2_sum_range.asm` – adds numbers in a range chosen by the user.
+
+### Build and Run
+Use these commands to build and run each program:
+```bash
+make run_repeat      # run the repeat name program
+make run_sum100      # run the sum 1..100 program
+make run_sumrange    # run the range sum program
+```
+---
+### Screenshots
+#### Task 2_repeat
+![Task_2_repeat_Output](screenshots/Task_2_repeat_Output.png)
+#### Task 2_sum10
+![Task_2_sum100_Output](screenshots/Task_2_sum100_Output.png)
+#### Task 2_sumrange
+![Task_2_sumrange_Output](screenshots/Task_2_sumrange_Output.png)
