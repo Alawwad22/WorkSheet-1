@@ -67,3 +67,25 @@ make run_sumrange    # run the range sum program
 ![Task_2_sum100_Output](screenshots/Task_2_sum100_Output.png)
 #### Task 2_sumrange
 ![Task_2_sumrange_Output](screenshots/Task_2_sumrange_Output.png)
+---
+
+## Task 3 – Makefile
+
+### Goal
+The goal of this task is to make it easier to build and run all the programs using one simple tool called **make**.  
+Instead of typing long commands every time, the Makefile handles everything for you.
+
+### Files
+- `Makefile` – a file that tells the computer how to build and run all your assembly programs.  
+- Uses the same `.asm` and `.c` files from Tasks 1 and 2.
+
+### Build and Run
+You can use these commands to build and run your programs:
+```bash
+make          # builds all programs
+make clean    # deletes object files and executables
+make run1     # runs Task 1
+make run1_2   # runs Task 1.2
+make run_repeat
+make run_sum100
+make run_sumrange
