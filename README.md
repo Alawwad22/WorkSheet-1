@@ -89,3 +89,12 @@ make run1_2   # runs Task 1.2
 make run_repeat
 make run_sum100
 make run_sumrange
+```
+---
+
+## Summary
+In this worksheet, I learned how to write and run basic assembly programs and how they work with C code.  
+I also learned how to use loops, if-statements, and arrays in assembly, and how to build everything using a Makefile.  
+
+All my programs worked correctly and were tested on the UWE `csctcloud` server.  
+This worksheet helped me understand how computers run code at a low level and how operating systems start from simple assembly programs.
